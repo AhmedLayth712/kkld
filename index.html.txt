@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع التواصل بالاسم المستعار</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>تواصل باستخدام اسم مستعار</h1>
+        
+        <!-- نموذج إرسال الرسالة -->
+        <div class="form-container">
+            <input type="text" id="nickname" placeholder="أدخل اسمك المستعار" required>
+            <textarea id="message" placeholder="اكتب رسالتك هنا" required></textarea>
+            <button onclick="sendMessage()">أرسل الرسالة</button>
+        </div>
+        
+        <!-- عرض الرسائل المرسلة -->
+        <div class="messages-container" id="messagesContainer">
+            <h2>الرسائل:</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

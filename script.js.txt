@@ -1,0 +1,25 @@
+function sendMessage() {
+    // الحصول على الاسم المستعار والرسالة
+    const nickname = document.getElementById('nickname').value;
+    const message = document.getElementById('message').value;
+
+    // التحقق من وجود الاسم والرسالة
+    if (nickname.trim() === "" || message.trim() === "") {
+        alert("يرجى ملء جميع الحقول.");
+        return;
+    }
+
+    // إنشاء العنصر لعرض الرسالة
+    const messageContainer = document.createElement('div');
+    messageContainer.classList.add('message');
+
+    // إضافة الاسم والرسالة
+    messageContainer.innerHTML = `<span class="nickname">${nickname}</span>: <p>${message}</p>`;
+
+    // إضافة الرسالة إلى الحاوية
+    document.getElementById('messagesContainer').appendChild(messageContainer);
+
+    // مسح الحقول بعد الإرسال
+    document.getElementById('nickname').value = "";
+    document.getElementById('message').value = "";
+}
